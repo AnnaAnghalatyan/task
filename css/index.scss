@@ -1,0 +1,348 @@
+@import 'variables';
+@import 'media';
+@import 'fonts';
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: $text-color-1;
+}
+
+button {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+%form-element {
+    border: 1px solid $border-color;
+    border-radius: $radius;
+    font-size: 13px;
+    padding: 10px 15px;
+    color: $text-color-1;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    transition: $transition;
+
+    &:focus,
+    &:hover  {
+        border-color: $blue;
+    }
+}
+
+%icon-line {
+    width: 18px;
+    height: 2px;
+    background: $icon-color;
+    border-radius: 3px;
+}
+
+.heading {
+    font-size: 22px;
+    color: $text-color-2;
+
+    &_bolder {
+        font-family: $font-family-3;
+        position: relative;
+        display: inline-flex;
+
+        &:after {
+            content: "?";
+            font-size: 12px;
+            background: #CCCCCC;
+            width: 14px;
+            height: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3px;
+            border-radius: 50%;
+            position: absolute;
+            top: -7px;
+            right: -20px;
+            color: #fff;
+            box-sizing: border-box;
+            font-family: Arial;
+        }
+    }
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 28px 48px;
+}
+
+.label {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.select-box {
+    &__select {
+       @extend %form-element;
+       
+    }
+}
+
+.input-box {
+    &__input {
+        @extend %form-element;
+        
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $text-color-1;
+            opacity: 1; /* Firefox */
+        }
+          
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: $text-color-1;
+        }
+          
+        &::-ms-input-placeholder { /* Microsoft Edge */
+            color: $text-color-1;
+        }
+    }
+
+    
+}
+
+
+.drop-btn {
+
+    &__line {
+        display: block;
+        @extend %icon-line;
+         
+        &:not(:first-child) {
+            margin-top: 6px;
+        }
+    } 
+}
+
+
+.add-btn {
+    font-size: 13px;
+    line-height: 19px;
+    background: $blue;
+    color: #f8f8f8;
+    border-radius: $radius;
+    padding: 0px 15px;
+    min-height: 30px;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: $transition;
+
+    &:hover {
+        color: $blue;
+        background: #fff;
+        border: 1px solid $blue;
+    }
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    
+    &__input {
+      display: none;
+      
+      &:checked + .switch__label {
+        background: $green;
+      }
+      
+      &:checked + .switch__label:after {
+        left: 17px;
+      }
+    }
+    
+    &__label {
+      width: 34px;
+      height: 18px;
+      border-radius: 10px;
+      display: inline-block;
+      cursor: pointer;
+      transition: 0.3s ease;
+      position: relative;
+      background:$light-purple;
+      margin-left: 10px;
+      flex-shrink: 0;
+      
+      &:after {
+        width: 14px;
+        height: 14px;
+        background: #fff;
+        position: absolute;
+        content: "";
+        border-radius: 50%;
+        top: 2px;
+        left: 2px;
+        transition: inherit;
+        display: block
+        
+      }
+    }
+  }
+
+
+.checkbox {
+    display: inline-flex;
+
+    &__input {
+        display: none;
+
+        &:checked + .checkbox__label {
+            border: none;
+            background-image: url('../images/icons/check.svg');
+            background-size: cover;
+        }
+    }
+
+    &__label {
+        cursor: pointer;
+        background-image: unset;
+        transition: background-image $transition;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $border-color;
+        display: inline-flex;
+        border-radius: 2px;
+    }
+}
+
+.delete-btn {
+    width: 16px;
+    height: 20px;
+    background-image: url('../images/icons/trash.svg');
+    transition: $transition;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+
+    @include md-less {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.group {
+    padding-bottom: 30px;
+    border-bottom: 1px solid $border-color;
+
+
+    &__switch {
+
+        &:not(:last-child) {
+            margin-right: 20px;
+
+            @include md-less {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__item {   
+        width: 45%;
+
+        @include md-less {
+            width: 100%
+        }
+        
+        &:not(last-child) {
+            margin-right: 5%;
+
+            @include md-less {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}
+
+.group-item {
+    margin-top: 30px;
+    
+    &__heading {
+        margin-left: 45px;
+    }
+
+    &__table-wrapper {
+        margin-top: 34px;
+        overflow-x: auto;
+    }
+
+    &__item-name {
+        min-width: 170px;
+    }
+
+    &__item-price {
+        min-width: 100px;
+
+        strong {
+            margin-right: 20px;
+        }
+    }
+
+    &__image-block {
+        width: 40px;
+        background: url('../images/icons/camera.svg') no-repeat;
+        background-position: center;
+        
+    }
+
+    &__table {
+        border-collapse: collapse;
+
+        thead {
+            tr {
+                border-bottom: 1px dashed $border-color;
+
+                td {
+                    padding: 15px 10px;
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                &:not(:last-child) {
+                    border-bottom: 1px dashed $border-color;
+    
+                }
+
+                td {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .bordered {
+        border: 1px solid $border-color;
+        border-radius: $radius;
+        display: inline-block;
+        height: 100%;
+        padding: 10px 13px;
+        min-height: 40px;
+    }
+}
