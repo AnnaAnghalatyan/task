@@ -81,6 +81,10 @@ button {
     max-width: 1250px;
     margin: auto;
     padding: 28px 48px;
+
+    @include md-less {
+        padding: 20px 15px
+    }
 }
 
 .label {
@@ -349,7 +353,3 @@ button {
     }
 }
 
-// .ui-state-highlight {
-//     border: 1px dashed $border-color;
-//     background: red;
-// }

@@ -116,6 +116,12 @@ button {
   padding: 28px 48px;
 }
 
+@media (max-width: 767px) {
+  .container {
+    padding: 20px 15px;
+  }
+}
+
 .label {
   margin-bottom: 15px;
   display: block;
