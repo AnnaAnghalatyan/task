@@ -255,9 +255,11 @@
                                     </div>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
+                    <button data-table="0" class="add-new-item">
+                        Add new item
+                    </button>
                 </div>
             </div>
         </div>
@@ -315,20 +317,6 @@
                     <button class="add-btn">Add Variable</button>
 
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
             <div class="group-item">
                 <div class="heading group-item__heading">Group Item</div>
@@ -344,8 +332,6 @@
                                 <td>In stock</td>
                                 <td>Subcategory</td>
                             </tr>
-
-
                         </thead>
                         <tbody class="sortable">
                             <tr>
@@ -519,11 +505,37 @@
 
                         </tbody>
                     </table>
+                    <button data-table="1" class="add-new-item">
+                        Add new item
+                    </button>
                 </div>
             </div>
         </div>
 
     </div>
+    </div>
+
+    <div class="modal">
+        <div class="modal__content">
+            <form class="modal__form">
+                <div class="row group__row">
+                    <div class="group__item input-box">
+                        <label class="input-box__label label">Item name</label>
+                        <input name="name" placeholder="" type="text" class="modal__input input-box__input">
+                    </div>
+                    <div class="group__item input-box">
+                        <label class="input-box__label label">Price</label>
+                        <input name="price" placeholder="" type="number" class="modal__input input-box__input">
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <button class="add-btn modal__submit">Submit</button>
+                    <button type="button" class="cancel-btn modal__cancel">Cancel</button>
+                </div>
+            </form>
+           
+        </div>
     </div>
 
     <script src="js/jquery-3.5.1.min.js"></script>
@@ -532,26 +544,7 @@
     <script src="js/jquery-sortable-animation.js"></script>
 
 
-    <script>
-        $(".sortable").sortable({
-            handle: ".drop-btn",
-            axis: 'y',
-            containment: 'parent',
-            animation: 200,
-        });
-
-        $("#sortable").disableSelection();
-
-        $("#group-container").sortable({
-            handle: ".group__sort",
-            axis: 'y',
-            containment: 'parent',
-            animation: 200,
-        });
-
-        $("#group-container").disableSelection();
-
-    </script>
+    <script src="js/index.js"></script>
 
 </body>
 
