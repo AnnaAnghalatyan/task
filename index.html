@@ -14,259 +14,512 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="group">
-            <div class="heading heading_bolder">
-                Group Details
+    <div id="group-container" class="container">
+        <div class="group-content">
+            <div class="group">
+                <div class="heading heading_bolder">
+                    Group Details 1
+                </div>
+                <div class="row group__row">
+                    <span class="drop-btn group__sort">
+                        <span class="drop-btn__line"></span>
+                        <span class="drop-btn__line"></span>
+                        <span class="drop-btn__line"></span>
+                    </span>
+                    <div class="group__item input-box">
+                        <label for="i1" class="input-box__label label">Label for input</label>
+                        <input id="i1" placeholder="Toast it" type="text" class="input-box__input">
+                    </div>
+
+                    <div class="group__item select-box">
+                        <label for="s1" class="select-box__label label">Label for select</label>
+                        <select class="select-box__select" name="" id="s1">
+                            <option value="1">Bread/Rye</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="switch group__switch">
+                        some text as label
+                        <input id="switch1" class="switch__input" type="checkbox">
+                        <label for="switch1" class="switch__label"></label>
+                    </div>
+                    <div class="switch group__switch">
+                        some text as label
+                        <input id="switch2" class="switch__input" type="checkbox">
+                        <label for="switch2" class="switch__label"></label>
+                    </div>
+                </div>
+                <div class="row group__row">
+                    <div class="group__item select-box">
+                        <!-- <label for="s1" class="select-box__label label">Label for select</label> -->
+                        <select class="select-box__select" name="" id="s4">
+                            <option value="1">Bread/Rye</option>
+                        </select>
+                    </div>
+
+                    <div class="group__item select-box">
+                        <!-- <label for="s1" class="select-box__label label">Label for select</label> -->
+                        <select class="select-box__select" name="" id="s1">
+                            <option value="1">Bread/Rye</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="add-btn">Add Variable</button>
+                </div>
             </div>
-            <div class="row group__row">
-                <div class="group__item input-box">
-                    <label for="i1" class="input-box__label label">Label for input</label>
-                    <input id="i1" placeholder="Toast it" type="text" class="input-box__input">
-                </div>
+            <div class="group-item">
+                <div class="heading group-item__heading">Group Item</div>
+                <div class="group-item__table-wrapper">
+                    <table class="group-item__table">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>Default</td>
+                                <td>Item image</td>
+                                <td>Item name</td>
+                                <td>Additional price (opt)</td>
+                                <td>In stock</td>
+                                <td>Subcategory</td>
+                            </tr>
 
-                <div class="group__item select-box">
-                    <label for="s1" class="select-box__label label">Label for select</label>
-                    <select class="select-box__select" name="" id="s1">
-                        <option value="1">Bread/Rye</option>
-                    </select>
+
+                        </thead>
+                        <tbody class="sortable">
+                            <tr>
+                                <td>
+                                    <span class="drop-btn">
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        </button>
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <input class="checkbox__input" checked type="checkbox">
+                                        <label class="checkbox__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__image-block">
+                                        <img src="images/photo.png" alt="" class="group-item__image">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-name">Cheese</span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-price">
+                                        <strong>$</strong> 1.5
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch1" class="switch__input" type="checkbox">
+                                        <label for="switch1" class="switch__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch2" class="switch__input" type="checkbox">
+                                        <label for="switch2" class="switch__label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="drop-btn">
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        </button>
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <label class="checkbox__label" ></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__image-block">
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-name">Cheese</span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-price">
+                                        <strong>$</strong> 2.5
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch3" class="switch__input" type="checkbox">
+                                        <label for="switch3" class="switch__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch4" class="switch__input" type="checkbox">
+                                        <label for="switch4" class="switch__label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="drop-btn">
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        </button>
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <label class="checkbox__label" ></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__image-block">
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-name">Cheese</span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-price">
+                                        <strong>$</strong> 2.5
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch5" class="switch__input" type="checkbox">
+                                        <label for="switch5" class="switch__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch6" class="switch__input" type="checkbox">
+                                        <label for="switch6" class="switch__label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="drop-btn">
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        </button>
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <label class="checkbox__label" ></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__image-block">
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-name">Cheese</span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-price">
+                                        <strong>$</strong> 2.5
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch7" class="switch__input" type="checkbox">
+                                        <label for="switch7" class="switch__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch8" class="switch__input" type="checkbox">
+                                        <label for="switch8" class="switch__label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
-            <div class="row">
-                <div class="switch group__switch">
-                    some text as label
-                    <input id="switch1" class="switch__input" type="checkbox">
-                    <label for="switch1" class="switch__label"></label>
-                </div>
-                <div class="switch group__switch">
-                    some text as label
-                    <input id="switch1" class="switch__input" type="checkbox">
-                    <label for="switch1" class="switch__label"></label>
-                </div>
-            </div>
-            <div class="row group__row">
-                <div class="group__item select-box">
-                    <!-- <label for="s1" class="select-box__label label">Label for select</label> -->
-                    <select class="select-box__select" name="" id="s4">
-                        <option value="1">Bread/Rye</option>
-                    </select>
-                </div>
-
-                <div class="group__item select-box">
-                    <!-- <label for="s1" class="select-box__label label">Label for select</label> -->
-                    <select class="select-box__select" name="" id="s1">
-                        <option value="1">Bread/Rye</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <button class="add-btn">Add Variable</button>
-
-            </div>
-
-
-
-
-
-
-
-            <button class="delete-btn"></button>
-
-
-
-
-
-
         </div>
-        <div class="group-item">
-            <div class="heading group-item__heading">Group Item</div>
-            <div class="group-item__table-wrapper">
-                <table class="group-item__table">
-                    <thead>
-                        <tr>
-                            <td></td>
-                            <td>Default</td>
-                            <td>Item image</td>
-                            <td>Item name</td>
-                            <td>Additional price (opt)</td>
-                            <td>In stock</td>
-                            <td>Subcategory</td>
-                        </tr>
+        <div class="group-content">
+            <div class="group">
+                <div class="heading heading_bolder">
+                    Group Details 2
+                </div>
+                <div class="row group__row">
+                    <span class="drop-btn group__sort">
+                        <span class="drop-btn__line"></span>
+                        <span class="drop-btn__line"></span>
+                        <span class="drop-btn__line"></span>
+                    </span>
+                    <div class="group__item input-box">
+                        <label for="i1" class="input-box__label label">Label for input</label>
+                        <input id="i1" placeholder="Toast it" type="text" class="input-box__input">
+                    </div>
+
+                    <div class="group__item select-box">
+                        <label for="s1" class="select-box__label label">Label for select</label>
+                        <select class="select-box__select" name="" id="s1">
+                            <option value="1">Bread/Rye</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="switch group__switch">
+                        some text as label
+                        <input id="switch9" class="switch__input" type="checkbox">
+                        <label for="switch9" class="switch__label"></label>
+                    </div>
+                    <div class="switch group__switch">
+                        some text as label
+                        <input id="switch10" class="switch__input" type="checkbox">
+                        <label for="switch10" class="switch__label"></label>
+                    </div>
+                </div>
+                <div class="row group__row">
+                    <div class="group__item select-box">
+                        <!-- <label for="s1" class="select-box__label label">Label for select</label> -->
+                        <select class="select-box__select" name="" id="s4">
+                            <option value="1">Bread/Rye</option>
+                        </select>
+                    </div>
+
+                    <div class="group__item select-box">
+                        <!-- <label for="s1" class="select-box__label label">Label for select</label> -->
+                        <select class="select-box__select" name="" id="s1">
+                            <option value="1">Bread/Rye</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="add-btn">Add Variable</button>
+
+                </div>
 
 
-                    </thead>
-                    <tbody id="sortable">
-                        <tr>
-                            <td>
-                                <span class="drop-btn">
-                                    <span class="drop-btn__line"></span>
-                                    <span class="drop-btn__line"></span>
-                                    <span class="drop-btn__line"></span>
-                                    </button>
-                            </td>
-                            <td>
-                                <div class="checkbox">
-                                    <input class="checkbox__input" id="check1" type="checkbox">
-                                    <label class="checkbox__label" for="check1"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__image-block">
 
-                                </span>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__item-name">Cheese</span>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__item-price">
-                                    <strong>$</strong> 1.5
-                                </span>
-                            </td>
-                            <td>
-                                <div class="switch group__switch">
 
-                                    <input id="switch1" class="switch__input" type="checkbox">
-                                    <label for="switch1" class="switch__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="switch group__switch">
 
-                                    <input id="switch1" class="switch__input" type="checkbox">
-                                    <label for="switch1" class="switch__label"></label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="drop-btn">
-                                    <span class="drop-btn__line"></span>
-                                    <span class="drop-btn__line"></span>
-                                    <span class="drop-btn__line"></span>
-                                    </button>
-                            </td>
-                            <td>
-                                <div class="checkbox">
-                                    <input class="checkbox__input" id="check1" type="checkbox">
-                                    <label class="checkbox__label" for="check1"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__image-block">
 
-                                </span>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__item-name">Cheese</span>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__item-price">
-                                    <strong>$</strong> 2.5
-                                </span>
-                            </td>
-                            <td>
-                                <div class="switch group__switch">
 
-                                    <input id="switch1" class="switch__input" type="checkbox">
-                                    <label for="switch1" class="switch__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="switch group__switch">
 
-                                    <input id="switch1" class="switch__input" type="checkbox">
-                                    <label for="switch1" class="switch__label"></label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="drop-btn">
-                                    <span class="drop-btn__line"></span>
-                                    <span class="drop-btn__line"></span>
-                                    <span class="drop-btn__line"></span>
-                                    </button>
-                            </td>
-                            <td>
-                                <div class="checkbox">
-                                    <input class="checkbox__input" id="check1" type="checkbox">
-                                    <label class="checkbox__label" for="check1"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__image-block">
 
-                                </span>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__item-name">Cheese</span>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__item-price">
-                                    <strong>$</strong> 2.5
-                                </span>
-                            </td>
-                            <td>
-                                <div class="switch group__switch">
 
-                                    <input id="switch1" class="switch__input" type="checkbox">
-                                    <label for="switch1" class="switch__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="switch group__switch">
 
-                                    <input id="switch1" class="switch__input" type="checkbox">
-                                    <label for="switch1" class="switch__label"></label>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <span class="drop-btn">
-                                    <span class="drop-btn__line"></span>
-                                    <span class="drop-btn__line"></span>
-                                    <span class="drop-btn__line"></span>
-                                    </button>
-                            </td>
-                            <td>
-                                <div class="checkbox">
-                                    <input class="checkbox__input" id="check1" type="checkbox">
-                                    <label class="checkbox__label" for="check1"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__image-block">
 
-                                </span>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__item-name">Cheese</span>
-                            </td>
-                            <td>
-                                <span class="bordered group-item__item-price">
-                                    <strong>$</strong> 2.5
-                                </span>
-                            </td>
-                            <td>
-                                <div class="switch group__switch">
 
-                                    <input id="switch1" class="switch__input" type="checkbox">
-                                    <label for="switch1" class="switch__label"></label>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="switch group__switch">
 
-                                    <input id="switch1" class="switch__input" type="checkbox">
-                                    <label for="switch1" class="switch__label"></label>
-                                </div>
-                            </td>
-                        </tr>
+            </div>
+            <div class="group-item">
+                <div class="heading group-item__heading">Group Item</div>
+                <div class="group-item__table-wrapper">
+                    <table class="group-item__table">
+                        <thead>
+                            <tr>
+                                <td></td>
+                                <td>Default</td>
+                                <td>Item image</td>
+                                <td>Item name</td>
+                                <td>Additional price (opt)</td>
+                                <td>In stock</td>
+                                <td>Subcategory</td>
+                            </tr>
 
-                    </tbody>
-                </table>
+
+                        </thead>
+                        <tbody class="sortable">
+                            <tr>
+                                <td>
+                                    <span class="drop-btn">
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        </button>
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <input class="checkbox__input"  type="checkbox">
+                                        <label class="checkbox__label" "></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__image-block">
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-name">Cheese</span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-price">
+                                        <strong>$</strong> 1.5
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch11" class="switch__input" type="checkbox">
+                                        <label for="switch11" class="switch__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch12" class="switch__input" type="checkbox">
+                                        <label for="switch12" class="switch__label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="drop-btn">
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        </button>
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <input class="checkbox__input"  type="checkbox">
+                                        <label class="checkbox__label" "></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__image-block">
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-name">Cheese</span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-price">
+                                        <strong>$</strong> 2.5
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch12" class="switch__input" type="checkbox">
+                                        <label for="switch12" class="switch__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch13" class="switch__input" type="checkbox">
+                                        <label for="switch13" class="switch__label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="drop-btn">
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        </button>
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <input class="checkbox__input" type="checkbox">
+                                        <label class="checkbox__label" ></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__image-block">
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-name">Cheese</span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-price">
+                                        <strong>$</strong> 2.5
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch14" class="switch__input" type="checkbox">
+                                        <label for="switch14" class="switch__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch15" class="switch__input" type="checkbox">
+                                        <label for="switch15" class="switch__label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="drop-btn">
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        <span class="drop-btn__line"></span>
+                                        </button>
+                                </td>
+                                <td>
+                                    <div class="checkbox">
+                                        <input checked class="checkbox__input" type="checkbox">
+                                        <label class="checkbox__label" ></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__image-block">
+
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-name">Cheese</span>
+                                </td>
+                                <td>
+                                    <span class="bordered group-item__item-price">
+                                        <strong>$</strong> 2.5
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch1" class="switch__input" type="checkbox">
+                                        <label for="switch1" class="switch__label"></label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="switch group__switch">
+
+                                        <input disabled id="switch2" class="switch__input" type="checkbox">
+                                        <label for="switch2" class="switch__label"></label>
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
 
@@ -280,7 +533,7 @@
 
 
     <script>
-        $("#sortable").sortable({
+        $(".sortable").sortable({
             handle: ".drop-btn",
             axis: 'y',
             containment: 'parent',
@@ -288,6 +541,15 @@
         });
 
         $("#sortable").disableSelection();
+
+        $("#group-container").sortable({
+            handle: ".group__sort",
+            axis: 'y',
+            containment: 'parent',
+            animation: 200,
+        });
+
+        $("#group-container").disableSelection();
 
     </script>
 

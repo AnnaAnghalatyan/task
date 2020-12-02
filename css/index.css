@@ -122,6 +122,10 @@ button {
   }
 }
 
+.group-content {
+  margin-bottom: 60px;
+}
+
 .label {
   margin-bottom: 15px;
   display: block;
@@ -163,6 +167,11 @@ button {
 .input-box__input::-ms-input-placeholder {
   /* Microsoft Edge */
   color: #1F2C3A;
+}
+
+.drop-btn {
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 
 .drop-btn__line {
@@ -216,6 +225,10 @@ button {
   background: #01BD70;
 }
 
+.switch__input:disabled + .switch__label {
+  cursor: auto;
+}
+
 .switch__input:checked + .switch__label:after {
   left: 17px;
 }
@@ -266,7 +279,6 @@ button {
 }
 
 .checkbox__label {
-  cursor: pointer;
   background-image: unset;
   -webkit-transition: background-image 0.3s ease;
   transition: background-image 0.3s ease;
@@ -300,6 +312,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 15px;
+  position: relative;
 }
 
 @media (max-width: 767px) {
@@ -317,6 +330,12 @@ button {
 .group {
   padding-bottom: 30px;
   border-bottom: 1px solid #DDE0E7;
+}
+
+.group__sort {
+  position: absolute;
+  bottom: 10px;
+  left: -30px;
 }
 
 .group__switch:not(:last-child) {
@@ -377,9 +396,19 @@ button {
 }
 
 .group-item__image-block {
-  width: 40px;
   background: url("../images/icons/camera.svg") no-repeat;
   background-position: center;
+  width: 40px !important;
+  height: 40px !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.group-item__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .group-item__table {
